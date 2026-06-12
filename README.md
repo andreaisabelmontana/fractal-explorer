@@ -1,8 +1,8 @@
-# Fractal Voyager
+# Fractal Explorer
 
 A GPU-accelerated **Mandelbrot and Julia set** explorer. Every pixel's escape-time iteration runs in a WebGL fragment shader, so you can pan and zoom into the boundary's infinite detail in real time.
 
-**▶ Live:** https://andreaisabelmontana.github.io/fractal-voyager/
+**▶ Live:** https://andreaisabelmontana.github.io/fractal-explorer/
 
 > **Not an original idea.** This recreates the concept of an existing project — I didn't invent it. I rebuilt it from scratch, my own way, out of curiosity about how it actually works (and tried to make it a little better along the way).
 
