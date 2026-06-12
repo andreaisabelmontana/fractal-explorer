@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Fractal Voyager</title>
+  <meta name="description" content="A GPU-accelerated Mandelbrot and Julia set explorer — pan, zoom, and dive into infinite detail." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔮</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="stage"></canvas>
+
+  <div id="nogl" class="nogl">Your browser doesn't support WebGL.</div>
+
+  <header class="hud">
+    <h1>Fractal Voyager</h1>
+    <p class="tag">Infinite detail, computed per pixel on the GPU.</p>
+  </header>
+
+  <aside class="panel" id="panel">
+    <button class="collapse" id="collapse" title="Hide panel">‹</button>
+
+    <section>
+      <label for="mode">Set</label>
+      <select id="mode">
+        <option value="0">Mandelbrot</option>
+        <option value="1">Julia</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Detail</h2>
+      <label>Max iterations <span data-out="iter">200</span></label>
+      <input type="range" id="iter" min="50" max="1000" step="10" value="200" />
+      <label for="palette">Palette</label>
+      <select id="palette">
+        <option value="0">Ember</option>
+        <option value="1">Ice</option>
+        <option value="2">Electric</option>
+        <option value="3">Botanical</option>
+      </select>
+    </section>
+
+    <div class="btns"><button id="reset">Reset view</button></div>
+
+    <p class="hint">Scroll to zoom · drag to pan. In Mandelbrot, <em>Shift-click</em> a point to spawn its Julia set.</p>
+  </aside>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
